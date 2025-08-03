@@ -7,7 +7,7 @@ services:
       url: ghcr.io/berriai/litellm:main-stable
     
     # This command bypasses the memory-heavy setup script
-    startCommand: "python -m litellm.proxy.proxy_server"
+    startCommand: python -m litellm.proxy.proxy_server
 
     # Your environment variables as you provided them
     envVars:
