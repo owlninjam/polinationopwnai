@@ -5,6 +5,11 @@ services:
     runtime: image
     image:
       url: ghcr.io/berriai/litellm:main-stable
+    
+    # This command bypasses the memory-heavy setup script
+    startCommand: "python -m litellm.proxy.proxy_server"
+
+    # Your environment variables as you provided them
     envVars:
       - key: PORT
         value: 4000
@@ -15,6 +20,7 @@ services:
       - key: LITELLM_SALT_KEY
         value: sk-PnWABG8jXNkpvwpclO7S5O1Pr2Hr
       - key: STORE_MODEL_IN_DB
-        value: True
+        value: "True"
+
     healthCheckPath: /health/liveliness
     autoDeploy: true
