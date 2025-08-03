@@ -8,7 +8,6 @@ services:
     envVars:
       - key: PORT
         value: 4000
-    # 👇 This block was moved back to the correct indentation level
     envVarGroups:
       - name: litellm-secrets
     healthCheckPath: /health/liveliness
