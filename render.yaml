@@ -6,9 +6,10 @@ services:
     image:
       url: ghcr.io/berriai/litellm:main-stable
     envVars:
-      - key: PORT # Sets the non-secret port variable
+      - key: PORT
         value: 4000
+    # 👇 This block was moved back to the correct indentation level
     envVarGroups:
-      - name: litellm-secrets # Securely links your secret keys
+      - name: litellm-secrets
     healthCheckPath: /health/liveliness
     autoDeploy: true
