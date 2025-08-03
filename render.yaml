@@ -9,7 +9,7 @@ services:
       - key: PORT
         value: 4000
       - key: DATABASE_URL
-        value: postgresql://postgres:7gCYdCpr9L4iNnnnPzrTTefJeBCyEYNYA6rGsDyY@db.nzlwzgubuyoieahvnikv.supabase.co:5432/postgres
+        value: postgresql://neondb_owner:npg_DfIOpaq01bLm@ep-fancy-smoke-aakzbvhf-pooler.westus3.azure.neon.tech/neondb?sslmode=require&channel_binding=require
       - key: LITELLM_MASTER_KEY
         value: sk-3toFpFmGgHCRtHSYeC7DCxnESPcjTopnNh8tjQyM
       - key: LITELLM_SALT_KEY
