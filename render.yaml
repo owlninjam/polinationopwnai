@@ -1,13 +1,14 @@
 services:
   - type: web
     name: openai-proxy
-    plan: free # <-- Add this line to specify the free instance type
+    plan: free
     runtime: image
     image:
       url: ghcr.io/berriai/litellm:main-stable
     envVars:
-      - key: PORT
+      - key: PORT # Sets the non-secret port variable
         value: 4000
-    numInstances: 1
+    envVarGroups:
+      - name: litellm-secrets # Securely links your secret keys
     healthCheckPath: /health/liveliness
     autoDeploy: true
