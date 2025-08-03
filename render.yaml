@@ -8,7 +8,13 @@ services:
     envVars:
       - key: PORT
         value: 4000
-    envVarGroups:
-      - name: litellm-secrets
+      - key: DATABASE_URL
+        value: postgresql://postgres:7gCYdCpr9L4iNnnnPzrTTefJeBCyEYNYA6rGsDyY@db.nzlwzgubuyoieahvnikv.supabase.co:5432/postgres
+      - key: LITELLM_MASTER_KEY
+        value: sk-3toFpFmGgHCRtHSYeC7DCxnESPcjTopnNh8tjQyM
+      - key: LITELLM_SALT_KEY
+        value: sk-PnWABG8jXNkpvwpclO7S5O1Pr2Hr
+      - key: STORE_MODEL_IN_DB
+        value: True
     healthCheckPath: /health/liveliness
     autoDeploy: true
